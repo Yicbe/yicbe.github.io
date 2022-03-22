@@ -109,8 +109,8 @@
                                 <h6>Your Response has been recorded.</h6> 
                                 <br>
                                 <p id="saved_amt"></p>
-                                <p>Average rainfall in Coimbatore taken is 700 mm anually</p>
-                                <p>If you are not harvesting the Rainwater, Please do it immediately. You can contact YI, Coimbatore, Team Climate Change for guidance support.</p>
+                                <p>Average rainfall in Coimbatore taken is <strong>700 mm </strong>per year</p>
+                                <p>If you are not harvesting the Rainwater, Please do it immediately. You can contact YI, Coimbatore, Team Climate Change for guidance and support.</p>
                                 
                                 <a href="index.html">Go to Home</a>
                              </div>
@@ -153,7 +153,7 @@ res=(parseInt(percentage)*sv)/100;
     }
     console.log(localStorage);
 
-    u.textContent="You saved "+res+" litres of water which is "+percentage+" % of total water collected ("+sv+" )";
+    u.innerHTML="You saved "+res.toString().bold()+" litres of water which is "+percentage.toString().bold()+" <strong>% </strong>of total water collected ("+sv.toString().bold()+" litres)";
     localStorage.removeItem("saving");
     localStorage.removeItem("percentage");
   

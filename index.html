@@ -310,7 +310,8 @@
       }
     localStorage.setItem("saving",saving);
     localStorage.setItem('percentage',percentage);
-    addRow = await sheet.addRow({ 'S.No':sheet.rowCount+1,'Date':new Date().toDateString(),'Name':name,
+    const rows = await sheet.getRows();
+    addRow = await sheet.addRow({ 'S.No':rows.length+1,'Date':new Date().toDateString(),'Name':name,
           'Type of Building-(Residential/Commercial/Others)':building,'Address':address,'Length(in feet)':height,'Width(in feet)':breadth,
           'Terrace area(In Sq.Ft)':area,'Terrace area (in Sq.M)':area*0.09290304,'Quantity of RainWater Collected (in Lits/ year)':saving,
           'Rainwater Harvesting Availability-Yes/No':harvest,'Options':all_options.toString()});
