@@ -1,0 +1,15 @@
+{
+  "name": "contact-form-13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "google-spreadsheet": "^3.2.0"
+  }
+}

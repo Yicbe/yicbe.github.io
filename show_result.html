@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="public/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style type="text/css">
+
+    body
+    {
+        background:#f2f2f2;
+    }
+
+    .payment
+	{
+		border:1px solid #f2f2f2;
+		height:450px;
+        border-radius:20px;
+        background:#fff;
+	}
+   .payment_header
+   {
+	   background:green;
+	   padding:20px;
+       border-radius:20px 20px 0px 0px;
+	   
+   }
+   
+   .check
+   {
+	   margin:0px auto;
+	   width:50px;
+	   height:50px;
+	   border-radius:100%;
+	   background:#fff;
+	   text-align:center;
+   }
+   
+   .check i
+   {
+	   vertical-align:middle;
+	   line-height:50px;
+	   font-size:30px;
+   }
+
+    .content 
+    {
+        text-align:center;
+    }
+
+    .content  h1
+    {
+        font-size:25px;
+        padding-top:25px;
+    }
+
+    .content a
+    {
+        width:200px;
+        height:35px;
+        color:#fff;
+        border-radius:30px;
+        padding:5px 10px;
+        background:green;
+        transition:all ease-in-out 0.3s;
+    }
+
+    .content a:hover
+    {
+        text-decoration:none;
+        background:#000;
+    }
+   
+</style>
+</head>
+<body>
+
+	<div class="bg-contact3" style="background-image: url('public/images/bg-rain-3.jpg');">
+		<div class="container-contact3">
+			
+                <div class="container">
+                    <div class="row">
+                       <div class="col-md-6 mx-auto mt-4">
+                          <div class="payment">
+                             <div class="payment_header">
+                                <div class="check"><i class="fa fa-check" aria-hidden="true"></i></div>
+                             </div>
+                             <div class="content">
+                                
+                                <h1>Thanks for participating in Rainwater harvesting Data collection drive.</h1>
+                                <h6>Your Response has been recorded.</h6> 
+                                <br>
+                                <p id="saved_amt"></p>
+                                <p>Average rainfall in Coimbatore taken is 700 mm anually</p>
+                                <p>If you are not harvesting the Rainwater, Please do it immediately. You can contact YI, Coimbatore, Team Climate Change for guidance support.</p>
+                                
+                                <a href="index.html">Go to Home</a>
+                             </div>
+                             
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+				
+			</div>
+		</div>
+	
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="public/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="public/vendor/bootstrap/js/popper.js"></script>
+	<script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="public/vendor/select2/select2.min.js"></script>
+	
+<!--===============================================================================================-->
+	<script src="public/js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script>
+    var u=document.getElementById("saved_amt");
+    var sv=localStorage.getItem('saving');
+    var percentage=localStorage.getItem('percentage');
+    var res=0;
+    if(parseInt(percentage)===0){
+console.log("jjj");
+    }
+    else{
+res=(parseInt(percentage)*sv)/100;
+    }
+    console.log(localStorage);
+
+    u.textContent="You saved "+res+" litres of water which is "+percentage+" % of total water collected ("+sv+" )";
+    localStorage.removeItem("saving");
+    localStorage.removeItem("percentage");
+  
+</script>
+
+</body>
+</html>
